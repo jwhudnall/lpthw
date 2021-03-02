@@ -1,4 +1,5 @@
 from sys import argv # Imports argv function from the sys module
+
 script, filename = argv # unpacks 2 variables into argv function. First is the script name, second will be used for the filename
 
 txt = open(filename) # Sets the opening of the file to a variable 'txt'
