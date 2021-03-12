@@ -3,12 +3,15 @@ from sys import argv
 script, input_file = argv
 
 def print_all(f):
+    '''Prints a file's content'''
     print(f.read())
 
 def rewind(f):
+    '''Resets file handle to index 0 (the beginning)'''
     f.seek(0)
 
 def print_a_line(line_count, f):
+    '''Prints the current line count and line of text'''
     print(line_count, f.readline())
 
 current_file = open(input_file)
