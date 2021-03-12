@@ -26,6 +26,7 @@ rewind(current_file)
 
 print("Let's print three lines:")
 
+# Each line is printed by increasing 'current_line' after each successive line
 current_line = 1
 print_a_line(current_line, current_file)
 
