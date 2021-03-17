@@ -3,16 +3,16 @@ script, encoding, error = sys.argv  # List of command line arguments passed to t
 
 
 def main(language_file, encoding, errors):
-    line = language_file.readline()
+    line = language_file.readline() # Reads single line of file
 
     if line:
-        print_line(line, encoding, errors)
-        return main(language_file, encoding, errors)
+        print_line(line, encoding, errors) # If a line exists, calls print_line function to print the raw bytes and encoded bytes
+        return main(language_file, encoding, errors) # Recursively calls main() function until no more lines exist within the file
 
 def print_line(line, encoding, errors):
-    next_lang = line.strip()
-    raw_bytes = next_lang.encode(encoding, errors=errors)
-    cooked_string = raw_bytes.decode(encoding, errors=errors)
+    next_lang = line.strip() # Cleans whitespace before/after
+    raw_bytes = next_lang.encode(encoding, errors=errors) # Encodes string into bytes
+    cooked_string = raw_bytes.decode(encoding, errors=errors) # Decodes raw bytes into specified encoding
 
     print(raw_bytes, "<===>", cooked_string)
 
