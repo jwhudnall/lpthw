@@ -19,3 +19,7 @@ def print_line(line, encoding, errors):
 languages = open("languages.txt", encoding="utf-8")
 
 main(languages, encoding, error)
+
+# 'DBES' when working with strings
+# - Decode Bytes. ex: raw_bytes.decode()
+# - Encode strings. ex: utf_string.encode()
