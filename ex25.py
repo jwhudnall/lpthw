@@ -1,5 +1,5 @@
 def break_words(stuff):
-    """This function will break up words for us."""
+    """Breaks up words."""
     words = stuff.split(' ')
     return words
 
