@@ -19,6 +19,7 @@ print(txt.read())
 print("Type the filename again:")
 file_again = input("> ")
 
+# try/except blocks used to accept nonexistant files
 try:
     txt_again = open(file_again)
     print(txt_again())
