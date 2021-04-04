@@ -26,7 +26,7 @@ def bear_room():
 
         if choice == "take honey":
             dead("The bear looks at you then slpas your face.")
-        elif choice == "taunt bear" and not bear_moved:
+        elif "taunt bear" in choice and not bear_moved:
             print("The bear has moved from the door.")
             print("You can go through it now.")
             bear_moved = True
@@ -52,7 +52,7 @@ def cthulhu_room():
         cthulhu_room()
 
 def dead(why):
-    print(why, "Good job!")
+    print(why, "Game over!")
     exit(0)
 
 def start():
