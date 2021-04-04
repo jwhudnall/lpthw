@@ -50,3 +50,7 @@ def cthulhu_room():
         dead("Well that was tasty!")
     else:
         cthulhu_room()
+
+def dead(why):
+    print(why, "Good job!")
+    exit(0)
