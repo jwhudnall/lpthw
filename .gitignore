@@ -20,3 +20,5 @@ bin-release/
 test.txt
 new_*
 test_*
+.DS_Store
+*/.DS_Store
