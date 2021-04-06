@@ -1,10 +1,28 @@
 # Word Choice Game
 
 # Pseudocode
+from sys import exit
 
+
+score = 0
 # Wake up in the morning: 2 choices
 # 1. Exercise
 # 2. Snooze
+def wakeup():
+    global score
+    print("You wake up to your alarm. You have 1 hour before you need to leave for work. Do you get up and exercise, or snooze?")
+
+    decision = input("> ")
+
+    if "exerci" in decision:
+        score += 1
+        print("You have a great workout and arrive at work with time to spare, ready to take on your day")
+    elif "snooze" in decision or "sleep" in decision:
+        score -= 1
+        print("You snooze your alarm and oversleep. You're late to work, stressed")
+    else:
+        print("Please choose between \"Exercising\" and \"Snoozing\"")
+        wakeup()
 
 # If you Exercise, gain 1 point. On time to work.
 # If you snooze, lose 1 point. Late to work.
@@ -28,3 +46,9 @@
 # 1 point: Could improve things.
 # -1 point: Likely not happy
 # -3 points: Should consider reprioritizing things.
+
+def main():
+    wakeup()
+
+main()
+print(f"Your score was: {score}")
