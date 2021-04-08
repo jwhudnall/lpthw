@@ -61,7 +61,9 @@ def meeting_choice():
 # -3 points: Should consider reprioritizing things.
 
 def display_score():
+    print("*" * 20)
     print(f"Your current score is: {score}")
+    print("*" * 20)
 
 def main():
     wakeup()
