@@ -60,9 +60,13 @@ def meeting_choice():
 # -1 point: Likely not happy
 # -3 points: Should consider reprioritizing things.
 
+def display_score():
+    print(f"Your current score is: {score}")
+
 def main():
     wakeup()
+    display_score()
     meeting_choice()
+    display_score()
 
 main()
-print(f"Your score was: {score}")
