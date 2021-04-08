@@ -24,12 +24,25 @@ def wakeup():
         print("Please choose between \"Exercising\" and \"Snoozing\"")
         wakeup()
 
-# If you Exercise, gain 1 point. On time to work.
-# If you snooze, lose 1 point. Late to work.
-
 # At work, 5 minutes before a big meeting. Coworker asks for help. 2 choices:
 # 1. Help them
 # 2. Tell them you have a meeting to attend.
+def meeting_choice():
+    global score
+    print("You're at work and you have 5 minutes until a big meeting.")
+    print("A co-worker comes by and asks for some help.")
+    print("Do you: 1) Help them out, or 2) Head to your meeting?")
+    decision = input("> ")
+
+    if "help" in decision:
+        score += 1
+        print("You help your co-worker, who tells your boss about it. You're late to the meeting, but everyone commends your helping a co-worker")
+    elif "head" in decision or "meet" in decision:
+        score -= 1
+        print("You are on time to your meeting, but your upset co-worker makes you look bad in the meeting.")
+    else:
+        print("Invalid choice.")
+        meeting_choice()
 
 # If you help them, gain 1 point. Coworker tells your boss how much you helped. Good Meeting.
 # If you don't help, lose 1 point. Upset coworker leads into bad meeting.
@@ -49,6 +62,7 @@ def wakeup():
 
 def main():
     wakeup()
+    meeting_choice()
 
 main()
 print(f"Your score was: {score}")
