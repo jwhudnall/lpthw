@@ -44,9 +44,24 @@ def meeting_choice():
         print("Invalid choice.")
         meeting_choice()
 
-# If you help them, gain 1 point. Coworker tells your boss how much you helped. Good Meeting.
-# If you don't help, lose 1 point. Upset coworker leads into bad meeting.
 
+def end_of_day():
+    global score
+    print("The work day is about to end, and your boss asks if you can stay to help work on a big project.")
+    print("You know your spouse is at home with your young child and is expecting you.")
+    print("Do you: 1) Stay at work, or 2) Go home")
+
+    decision = input("> ")
+    if "stay" in decision or "work" in decision:
+        score -= 1
+        print("Your boss is happy, but when you get home, you realize you missed your child's first steps. Your wife is upset")
+    elif "home" in decision or "leave" in decision:
+        score += 1
+        print("Your boss isn't thrilled, but understands you have a young child at home. You get home in time to see your child's first steps!")
+    else:
+        print("Invalid choice.")
+        end_of_day()
+            
 # *Decision* #
 # Work day ending, and boss asks you to stay late. You know your spouse is at home with your young child and is expecting you.
 
@@ -69,6 +84,8 @@ def main():
     wakeup()
     display_score()
     meeting_choice()
+    display_score()
+    end_of_day()
     display_score()
 
 main()
