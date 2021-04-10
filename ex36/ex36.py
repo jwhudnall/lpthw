@@ -18,6 +18,7 @@ def wakeup():
     else:
         print("Please choose between \"Exercising\" and \"Snoozing\"")
         wakeup()
+    meeting_choice()
 
 
 def meeting_choice():
@@ -36,6 +37,7 @@ def meeting_choice():
     else:
         print("Invalid choice.")
         meeting_choice()
+    end_of_day()
 
 
 def end_of_day():
@@ -54,6 +56,7 @@ def end_of_day():
     else:
         print("Invalid choice.")
         end_of_day()
+    dinner()
 
 # You go home to see what your spouse has made for dinner, or do you pick up dinner on the way home
 
@@ -81,12 +84,6 @@ def display_score():
 
 def main():
     wakeup()
-    display_score()
-    meeting_choice()
-    display_score()
-    end_of_day()
-    display_score()
-    dinner()
     display_score()
 
 main()
