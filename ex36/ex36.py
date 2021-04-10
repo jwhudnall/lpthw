@@ -1,6 +1,3 @@
-from sys import exit
-
-
 score = 0
 
 def wakeup():
@@ -82,8 +79,24 @@ def display_score():
     print(f"Your current score is: {score}")
     print("*" * 20)
 
+# Possible Scores:
+# * All +1: 4
+# * All -1: -4
+# -4, 4
+
+def final_score():
+    global score
+    if score == 4:
+        print(f"You scored {score} points. Perfect score!")
+    elif score > 0:
+        print(f"You scored {score} points. Overall, your day was positive.")
+    elif score == -4:
+        print(f"You scored {score} points. You may consider reconsidering a few things in order to live a long, lasting and enjoyable life.")
+    else:
+        print(f"You scored {score} points. You could do better, but you could also do worse!")
+
 def main():
     wakeup()
-    display_score()
+    final_score()
 
 main()
