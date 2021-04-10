@@ -55,6 +55,24 @@ def end_of_day():
         print("Invalid choice.")
         end_of_day()
 
+# You go home to see what your spouse has made for dinner, or do you pick up dinner on the way home
+
+def dinner():
+    global score
+    print("You get home and see that your spouse is getting ready to cook dinner.")
+    print("You also have a big presentation at work tomorrow that you haven't prepared for.")
+    print("Do you 1) Work on your work presentation, or 2) Help out with dinner?")
+
+    decision = input("> ")
+    if "work" in decision or "presentation" in decision:
+        score -= 1
+        print("You manage to prepare for work, but you can tell your spouse is stressed and exhausted at dinner. They seem distant, and you regret your decision.")
+    elif "help" in decision or "dinner" in decision:
+        score += 1
+        print("You and your spouse have a great time fixing dinner together. You feel refreshed and confident you'll nail the work presentation.")
+    else:
+        print("Invalid choice.")
+        dinner()
 
 def display_score():
     print("*" * 20)
@@ -67,6 +85,8 @@ def main():
     meeting_choice()
     display_score()
     end_of_day()
+    display_score()
+    dinner()
     display_score()
 
 main()
