@@ -14,3 +14,9 @@ while len(stuff) != 10:
 print("There we go: ", stuff)
 
 print("Let's do some things with stuff.")
+
+print(stuff[1])
+print(stuff[-1]) # last item
+print(stuff.pop())
+print(' '.join(stuff)) # Create a text string with remaining items in 'stuff'
+print('#'.join(stuff[3:5])) # Create text string separated by '#' for items 3 and 4 in 'stuff'
