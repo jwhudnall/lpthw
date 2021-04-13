@@ -34,3 +34,7 @@ print('Florida has: ', cities[states['Florida']])
 print('-' * 10)
 for state, abbrev in list(states.items()):
     print(f'{state} is abbreviated {abbrev}')
+
+# Default Value
+city = cities.get('TX', 'Does Not Exist')
+print(f'The city for the state of "TX" is: {city}')
